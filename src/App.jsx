@@ -108,7 +108,7 @@ export default function App() {
   const recs = RECS.filter(r => !r.check(vals)).sort((a, b) => b.impact - a.impact).slice(0, 3);
 
   const label = { display: "block", fontSize: 11, fontWeight: 600, color: css.p, textTransform: "uppercase", letterSpacing: ".6px", marginBottom: 6 };
-  const input = { width: "100%", padding: "9px 11px", border: 1px solid +css.b, borderRadius: 6, fontSize: 13, color: css.p, background: "white", outline: "none", fontFamily: "inherit" };
+  const input = { width: "100%", padding: "9px 11px", border: `1px solid ${css.b}`, borderRadius: 6, fontSize: 13, color: css.p, background: "white", outline: "none", fontFamily: "inherit" };
 
   return (
     <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif", color: css.p, padding: "2rem 1.5rem", background: "#F7F8FA", minHeight: "100vh" }}>
@@ -177,7 +177,7 @@ export default function App() {
             </div>
           </div>
           <div>
-            <div style={{ background: "white", border: 1px solid +css.b, borderRadius: 8, padding: "1.75rem 1.5rem", textAlign: "center", marginBottom: "1.5rem" }}>
+            <div style={{ background: "white", border: `1px solid ${css.b}`, borderRadius: 8, padding: "1.75rem 1.5rem", textAlign: "center", marginBottom: "1.5rem" }}>
               <div style={{ fontSize: 11, fontWeight: 600, color: css.m, textTransform: "uppercase", letterSpacing: ".7px" }}>Score complétude</div>
               <div style={{ fontSize: 52, fontWeight: 600, color: css.p, margin: "8px 0 4px", lineHeight: 1 }}>{score}</div>
               <div style={{ fontSize: 13, color: css.m }}>sur 100</div>
@@ -190,7 +190,7 @@ export default function App() {
               <div style={{ fontSize: 12, fontWeight: 600, color: levelColor, textTransform: "uppercase", letterSpacing: ".5px" }}>{level}</div>
             </div>
             {surcharge > 0 && (
-              <div style={{ padding: "11px 14px", background: css.warnBg, borderLeft: 3px solid +css.a, borderRadius: "0 4px 4px 0", fontSize: 13, marginBottom: "1rem", lineHeight: 1.5 }}>
+              <div style={{ padding: "11px 14px", background: css.warnBg, borderLeft: `3px solid ${css.a}`, borderRadius: "0 4px 4px 0", fontSize: 13, marginBottom: "1rem", lineHeight: 1.5 }}>
                 <strong style={{ color: css.a }}>⚠ Surcoté {surcharge}%</strong> vs DVF — perd 60-70% des acheteurs sérieux. Baisse 3-5% recommandée.
               </div>
             )}
